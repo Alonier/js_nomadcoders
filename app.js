@@ -1,8 +1,11 @@
-const title = document.querySelector(".hello");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
-function handleTitleClick(){
-    title.style.color = "blue";
+function onLoginSubmit(info){
+    info.preventDefault();
+    console.log(info);
 }
 
+loginForm.addEventListener("submit",onLoginSubmit);
 
-title.addEventListener("click",handleTitleClick);
+
