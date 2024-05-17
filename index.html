@@ -17,16 +17,33 @@
     </form>
     <h2 id = "clock">00:00</h2>
     <h1 id = "greeting" class = "hidden"></h1>
-    <form id = "link-form">
+
+    <!--링크 form (예정 X )-->
+    <form class = "hidden" id = "link-form">
         <input
         required
         type="text"
         placeholder="input the links"/>
         <button>input</button>
     </form>
-    <div id = "link-div"></div>
+    <!--링크 div 예정 X-->
+    <div class = "hidden" id = "link-div"></div>
+
+    <form id = "todo-form">
+        <input type = "text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id = "todo-list"></ul>
+    <div id = "quote">
+        <span></span><br>
+        <span></span>
+    </div>
+
     <script src = "js/greetings.js"></script>
     <script src = "js/clock.js"></script>
-    <script src = "js/links.js"></script>
+    <script src = "js/quotes.js"></script>
+    <script src = "js/background.js"></script>
+    <script src = "js/todo.js"></script>
+    <!--링크.js-->
+    <!--<script src = "js/links.js"></script>-->
 </body>
 </html>

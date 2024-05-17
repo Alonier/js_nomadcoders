@@ -49,8 +49,8 @@ if(localStorage.getItem("linkSeq") == null){
 }
 
 if(localStorage.getItem("username") == null){
-    linkForm.classList.add("hidden");
-    linkDiv.classList.add("hidden");
+    linkForm.classList.remove("hidden");
+    linkDiv.classList.remove("hidden");
 }
 
 linkForm.addEventListener("submit",onLinksubmit);
