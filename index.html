@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>momentum</title>
-    <link rel = "stylesheet" href = "css/style.css">
-</head>
-<body>
-    <form id = "login-form" class = "hidden">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- <form id = "login-form" class = "hidden">
     <input
     required
     maxlength="15"
@@ -15,6 +15,7 @@
     placeholder="What is your name?"/>
     <button>Log In</button>
     </form>
+    
     <h2 id = "clock">00:00</h2>
     <h1 id = "greeting" class = "hidden"></h1>
 
@@ -29,12 +30,73 @@
     <div id = "weather">
         <span></span>
         <span></span>
+    </div> -->
+
+    <div id="wrapper" class="wrapper">
+      <div class="profile" id="profile">
+        <form id="login-form" class="hidden profile__form">
+          <span class="profile__text">저의 이름은</span>
+          <input required maxlength="15" type="text" />
+          <span class="profile__text">입니다.</span>
+        </form>
+      </div>
+
+      <div id="section" class="section">
+        <div class="todo__btn" id="todo__btn">>></div>
+        <div id="greeting" class="profile__greeting"></div>
+        <div class="clock">
+          <span class="hours" id="hours"></span
+          ><span class="minutes" id="minutes"></span
+          ><span class="seconds" id="seconds"></span>
+        </div>
+        <div class="clock__divideLine"></div>
+        <div class="quote" id="quote">
+          <span></span><br />
+          <span></span>
+        </div>
+        <div class="weather" id="weather">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="todo" id="todo">
+          <div class="todo__container">
+            <div class="todo__left" id="todo__left">>></div>
+            <div class="todo__right">
+              <span class="todo__info">할 일을 적어보세요!</span>
+              <form id="todo-form">
+                <input
+                  type="text"
+                  placeholder="Write a To Do and Press Enter"
+                  required
+                />
+              </form>
+              <ul id="todo-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src = "js/greetings.js"></script>
-    <script src = "js/clock.js"></script>
-    <script src = "js/quotes.js"></script>
-    <script src = "js/background.js"></script>
-    <script src = "js/todo.js"></script>
-    <script type = "module" src = "js/weather.js"></script>
-</body>
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script type="module" src="js/weather.js"></script>
+    <script>
+      const todo = document.getElementById("todo");
+      const openBtn = document.getElementById("todo__btn");
+      const closeBtn = document.getElementById("todo__left");
+
+      closeBtn.addEventListener("click", () => {
+        todo.style["transform"] = "translateX(0)";
+        openBtn.style["opacity"] = "1";
+      });
+      openBtn.addEventListener("click", () => {
+        todo.style["transform"] = "translateX(-300px)";
+        openBtn.style["opacity"] = "0";
+      });
+    </script>
+  </body>
 </html>
